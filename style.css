@@ -1,0 +1,137 @@
+:root {
+    --primary-bg: rgba(44,62,80 ,1);
+    --secondary-bg: rgba(0,0,0,0.9);
+    --box-shadow-color-1: gold;
+    --box-shadow-color-2: rgba(149,165,166 ,0.1);
+    --box-shadow-color-3: #ecf0f1;
+    --phone-width: 350px;
+    --phone-height: 700px;
+  }
+
+  body{
+    background-color: var(--secondary-bg);
+  }
+  
+  .container{   
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: var(--phone-width);
+    height: var(--phone-height);
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:var(--primary-bg);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: -2px -3px 1px var(--box-shadow-color-1), 3px 5px 1px var(--box-shadow-color-2);
+  }
+
+ 
+
+.phone{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--phone-width);
+    height: var(--phone-height);
+    display: grid;
+    grid-template-columns: 6% 30.5% 13.5% 13.5% 30.5% 6%;
+    grid-template-rows: 3% 3% 3% 72% 9%;           
+}
+
+
+.phone-left{
+    background-color: var(--secondary-bg);
+    grid-column: 1/1;
+    grid-row: 4/6;    
+    border: none;           
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.phone-rigth{
+    background-color: var(--secondary-bg);
+    grid-column: 6/6;
+    grid-row: 4/6;        
+    border: none;
+}
+
+.phone-top{
+    background-color: var(--secondary-bg);
+    grid-column: 1/7;
+    grid-row: 1/4;
+    border: none;
+    position: relative;
+    z-index: 1;  
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;   
+}
+
+.phone-bottom{
+    background-color: var(--secondary-bg);
+    grid-column: 1/7;
+    grid-row: 6/6;
+    border: none;
+    position: relative;
+    z-index: 1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.phone-button{
+    position: relative;
+    grid-column: 3/3;
+    grid-row: 6/6;
+    z-index: 2;    
+    border-radius: 50%;
+    width: 85%;
+    height: 65%;    
+    margin-top: 25%;
+    margin-left: 65%;    
+    box-shadow: -1px -1px  1px var(--box-shadow-color-1), 0px 2px 2px 0px var(--box-shadow-color-3)
+}
+
+.phone-speaker{
+    position: relative;
+    z-index: 2;
+    background-color: var(--primary-bg);
+    grid-column: 4/4;
+    grid-row: 2/2;
+    height: 30%;
+    width: 100%;
+    margin-top: 20%;
+    margin-left: -50%;
+    border-radius: 10px;
+}
+
+.phone-sensor{
+    position: relative;
+    z-index: 3;
+    background-color: var(--primary-bg);
+    grid-column: 3/3;
+    grid-row: 2/2;
+    border-radius: 50%;
+    width: 15%;
+    height: 30%;
+    margin-top: 10%;
+}
+
+.phone-camera{
+    position: relative;
+    z-index: 3;
+    background-color: var(--primary-bg);
+    grid-column: 4/4;
+    grid-row: 1/1;
+    border-radius: 50%;
+    width: 15%;
+    height: 25%;
+    margin-top: 30%;
+    margin-left: -10%;
+}
